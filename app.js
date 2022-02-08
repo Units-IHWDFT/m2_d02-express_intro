@@ -1,19 +1,19 @@
 //   name you give	   name of the package you installed
 //       |                  |
-const myExpress = require('express');
+const express = require('express');
 
 require('dotenv').config();
 
 const PORT = process.env.PORT || 3000; //  Set default port to 3000 if port is not defined
 
 // here we are creating application
-const app = myExpress();
+const app = express();
 
 // ///////////////////////////////////////////////////////////////////////////////////////
 // stage 2:
 // Connect "public/" folder to our express app
 // makes everything inside public folder accessible to the rest of the app
-app.use(myExpress.static('public'));
+app.use(express.static('public'));
 
 // ///////////////////////////////////////////////////////////////////////////////////////
 
